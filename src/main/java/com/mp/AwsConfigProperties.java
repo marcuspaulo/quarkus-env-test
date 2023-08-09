@@ -8,12 +8,12 @@ import java.util.Optional;
 @ApplicationScoped
 public class AwsConfigProperties {
 
-    @Inject
+//    @Inject
     @ConfigProperty(name = "aws.byob.pure.sqs.queue")
     private String queueName;
 
     @ConfigProperty(name = "aws.byob.region")
-    String region;
+    public String region;
 
     @Inject
     @ConfigProperty(name = "greeting.message")
@@ -24,6 +24,10 @@ public class AwsConfigProperties {
 
     @ConfigProperty(name = "greeting.name")
     Optional<String> name;
+
+    public void testEnv() {
+        System.out.println("Test Region: " + region);
+    }
 
 ////    @ConfigProperty(name = "aws.byob.region")
 ////    //você declarou a variavel diferente

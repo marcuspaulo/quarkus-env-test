@@ -18,6 +18,8 @@ public class GreetingResource {
         System.out.println("QueueName2: " +  awsConfigProperties.getQueueName());
         System.out.println("Region: " + awsConfigProperties.region);
         System.out.println("message: " + awsConfigProperties.message);
+
+        awsConfigProperties.testEnv();
         return awsConfigProperties;
     }
 }
